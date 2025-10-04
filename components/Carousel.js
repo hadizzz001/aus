@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 const MyCarousel = () => {
   const images = [
     "https://res.cloudinary.com/dwzizbcht/image/upload/v1759588218/1_wg9tif.webp",
-    "https://res.cloudinary.com/dwzizbcht/image/upload/v1759576326/2_cgvm7a.webp",
+    "https://res.cloudinary.com/dwzizbcht/image/upload/v1759605403/Trottinette_vytxm2.webp",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -36,7 +36,7 @@ const MyCarousel = () => {
       {/* Overlay Content */}
       <div className="relative z-10 flex flex-col items-start justify-center h-full p-4 text-left text-black">
         <h1 className="text-5xl font-bold uppercase animate-slideInLeft myWhite">
-          Pety Sale
+          Modern Scooters
         </h1>
         <p className="text-[14px] mt-2 animate-slideInLeft delay-200 myWhite">
           Offer with up to 50% off on our categories!

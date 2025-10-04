@@ -47,27 +47,27 @@ const CarCard = ({ temp }: CarCardProps) => {
                                                     )} 
                                             </div> */}
                                             
-                                                                    <div className="relative inline-block w-[300px] h-[300px]">
-                          <img
-                            src={img[0]}
-                            alt="Default"
-                            className="w-full h-full object-cover object-center rounded"
-                          />
+<div className="relative inline-block w-[300px] h-[300px]">
+  <img
+    src={img[0]}
+    alt="Default"
+    className="w-full h-full object-contain object-center rounded  "
+  />
 
-                          {(
-                            (type === 'single' && parseInt(stock) === 0) ||
-                            (type === 'collection' &&
-                              color?.every(color =>
-                                color.sizes?.every(size => parseInt(size.qty) === 0)
-                              )
-                            )
-                          ) && (
-                              <div className="absolute inset-0 bg-gray-600 bg-opacity-70 text-white flex items-center justify-center text-lg font-bold z-10 rounded">
-                                Out of Stock
-                              </div>
-                            )}
+  {(
+    (type === 'single' && parseInt(stock) === 0) ||
+    (type === 'collection' &&
+      color?.every(color =>
+        color.sizes?.every(size => parseInt(size.qty) === 0)
+      )
+    )
+  ) && (
+    <div className="absolute inset-0 bg-gray-600 bg-opacity-70 text-white flex items-center justify-center text-lg font-bold z-10 rounded">
+      Out of Stock
+    </div>
+  )}
+</div>
 
-                        </div>
                                         </div>
 
                                     </div>

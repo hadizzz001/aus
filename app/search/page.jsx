@@ -106,11 +106,11 @@ const Body = () => {
                         key={item._id}
                         className="br_grid br_grid-cols-1 supports-subgrid:br_row-span-4 supports-subgrid:br_grid-rows-[subgrid]"
                       >
-<div className="relative inline-block w-full max-w-[300px] aspect-square">
+<div className="relative inline-block w-full max-w-[300px] aspect-square  ">
   <img
     src={item.img[0]}
     alt="Default"
-    className="w-full h-full object-cover object-center rounded"
+    className="w-full h-full object-contain object-center rounded"
   />
 
   {(
@@ -126,6 +126,7 @@ const Body = () => {
     </div>
   )}
 </div>
+
 
 
 

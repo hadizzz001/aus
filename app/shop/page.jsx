@@ -132,10 +132,10 @@ const Body = () => {
         <header className="br_text-white  br_p-3 br_pt-11 md:br_py-20 br_flex md:br_justify-center">
           <div className="br_text-left md:br_max-w-[600px] lg:br_max-w-[800px] md:br_text-center br_flex br_flex-col br_gap-2  md:br_gap-4 md:br_items-center">
             <h1 className="br_text-3xl md:br_text-4xl  myGray">
-              Our Animals
+              Our Products
             </h1>
             <p className="br_text-base-sans-stretched md:br_text-lg-sans-stretched myGray">
-              Get new friend now and enjoy the best of the wildlife.
+              Get new arrivals, special offers, and exclusive discounts
             </p>
           </div>
         </header>
@@ -275,26 +275,27 @@ const Body = () => {
                         key={item._id}
                         className="br_grid br_grid-cols-1 supports-subgrid:br_row-span-4 supports-subgrid:br_grid-rows-[subgrid]"
                       >
-                        <div className="relative inline-block w-full max-w-[300px] aspect-square">
-                          <img
-                            src={item.img[0]}
-                            alt="Default"
-                            className="w-full h-full object-cover object-center rounded"
-                          />
+<div className="relative inline-block w-full max-w-[300px] aspect-square  ">
+  <img
+    src={item.img[0]}
+    alt="Default"
+    className="w-full h-full object-contain object-center rounded"
+  />
 
-                          {(
-                            (item.type === 'single' && parseInt(item.stock) === 0) ||
-                            (item.type === 'collection' &&
-                              item.color?.every(color =>
-                                color.sizes?.every(size => parseInt(size.qty) === 0)
-                              )
-                            )
-                          ) && (
-                              <div className="absolute inset-0 bg-gray-600 bg-opacity-70 text-white flex items-center justify-center text-lg font-bold z-10 rounded">
-                                Out of Stock
-                              </div>
-                            )}
-                        </div>
+  {(
+    (item.type === 'single' && parseInt(item.stock) === 0) ||
+    (item.type === 'collection' &&
+      item.color?.every(color =>
+        color.sizes?.every(size => parseInt(size.qty) === 0)
+      )
+    )
+  ) && (
+    <div className="absolute inset-0 bg-gray-600 bg-opacity-70 text-white flex items-center justify-center text-lg font-bold z-10 rounded">
+      Out of Stock
+    </div>
+  )}
+</div>
+
 
 
 
