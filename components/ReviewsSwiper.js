@@ -8,92 +8,95 @@ import "swiper/css/navigation";
 
 const reviews = [
   {
-    name: "Rami Saab",
+    name: "Jack Thompson",
     image: "https://randomuser.me/api/portraits/men/12.jpg",
     stars: 5,
     text: "Truly outstanding service from start to finish!",
   },
   {
-    name: "Diala Kassem",
+    name: "Sophie Williams",
     image: "https://randomuser.me/api/portraits/women/22.jpg",
     stars: 4,
     text: "Very helpful team, though the wait was a little long.",
   },
   {
-    name: "Omar Daher",
+    name: "Liam Anderson",
     image: "https://randomuser.me/api/portraits/men/19.jpg",
     stars: 5,
     text: "Couldn’t have asked for a better experience.",
   },
   {
-    name: "Tala Barakat",
+    name: "Chloe Martin",
     image: "https://randomuser.me/api/portraits/women/16.jpg",
     stars: 4,
     text: "Impressed by the professionalism and quality.",
   },
   {
-    name: "Nadim Fakhoury",
+    name: "Ethan Harris",
     image: "https://randomuser.me/api/portraits/men/28.jpg",
     stars: 3,
     text: "Service was decent, but could be faster.",
   },
   {
-    name: "Lina Daouk",
+    name: "Olivia Brown",
     image: "https://randomuser.me/api/portraits/women/26.jpg",
     stars: 5,
     text: "Everything went perfectly. Highly recommend!",
   },
   {
-    name: "Hani Makarem",
+    name: "Benjamin Taylor",
     image: "https://randomuser.me/api/portraits/men/35.jpg",
     stars: 4,
     text: "Staff was courteous and the process was smooth.",
   },
   {
-    name: "Joumana Rahme",
+    name: "Amelia Johnson",
     image: "https://randomuser.me/api/portraits/women/36.jpg",
     stars: 5,
     text: "A flawless experience from beginning to end!",
   },
   {
-    name: "Kamal Hariri",
+    name: "Noah White",
     image: "https://randomuser.me/api/portraits/men/41.jpg",
     stars: 4,
     text: "Very satisfied. Would definitely return.",
   },
   {
-    name: "Carla Yammine",
+    name: "Charlotte Evans",
     image: "https://randomuser.me/api/portraits/women/41.jpg",
     stars: 5,
     text: "Above and beyond my expectations—thank you!",
   },
 ];
 
-
 const ReviewsSwiper = () => {
   return (
-    <div className="max-w-2xl mx-auto my-10"> 
+    <div className="max-w-2xl mx-auto my-10">
       <Swiper
         spaceBetween={20}
         slidesPerView={1}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         pagination={{ clickable: true }}
         navigation={true}
-        modules={[Autoplay , Navigation]}
+        modules={[Autoplay, Navigation]}
         className="rounded-xl shadow-lg"
       >
         {reviews.map((review, index) => (
-          <SwiperSlide key={index} className="bg-white p-5 rounded-lg   text-center">
+          <SwiperSlide
+            key={index}
+            className="bg-white p-5 rounded-lg text-center"
+          >
             <img
               src={review.image}
               alt={review.name}
               className="w-16 h-16 mx-auto rounded-full mb-3"
             />
             <h3 className="font-semibold text-lg myGray">{review.name}</h3>
-            <div className="flex justify-center my-2 myBB text-[20px]"  >
-              {"★".repeat(review.stars)}{"☆".repeat(5 - review.stars)}
+            <div className="flex justify-center my-2 myBB text-[20px]">
+              {"★".repeat(review.stars)}
+              {"☆".repeat(5 - review.stars)}
             </div>
-            <p className=" myGray">{review.text}</p>
+            <p className="myGray">{review.text}</p>
           </SwiperSlide>
         ))}
       </Swiper>

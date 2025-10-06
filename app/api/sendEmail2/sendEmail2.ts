@@ -58,8 +58,8 @@ Delivery fee: $${delivery}
 
   await resend.emails.send({
     from: "info@gkp.noreplynoreply.online",
-    // to: "alihadimedlej001@gmail.com",
-    to: "alihadimedlej001@gmail.com",
+    // to: "dealgo2025@gmail.com",
+    to: "dealgo2025@gmail.com",
     subject: "New Order from Website",
     text: message,
   });

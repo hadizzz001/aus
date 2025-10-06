@@ -4887,11 +4887,11 @@ a.review {
 
 .radio__fieldset .radio__button input.sold-out:checked+label:before,
 .radio__fieldset .radio__button input.unavailable:checked+label:before {
-  background-color: #A59E98
+  background-color: #143e56
 }
 
 .radio__fieldset .radio__button input:checked~label {
-  border: 1px solid #A59E98
+  border: 1px solid #143e56
 }
 
 .radio__fieldset--small {
@@ -5181,7 +5181,7 @@ a.review {
 }
 
 .swatch__button input~label[data-swatch=white i]:after {
-  border-color: #A59E98
+  border-color: #143e56
 }
 
 .swatch__button input.sold-out~label[data-swatch=black i]:before,
@@ -5836,7 +5836,7 @@ a.review {
 
 .product-item:hover .product__grid__cutline,
 .product-item:hover .product__grid__title {
-  color: #A59E98
+  color: #143e56
 }
 
 .product__grid__cutline {

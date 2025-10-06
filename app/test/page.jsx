@@ -255,7 +255,7 @@ const Body = () => {
       style={{
         width: "30px",
         height: "30px",
-        backgroundColor: "#A59E98",
+        backgroundColor: "#143e56",
         borderRadius: "50%",
       }}
     >

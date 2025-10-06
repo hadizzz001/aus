@@ -15,7 +15,7 @@ export const sendEmail = async (formData: FormData) => {
     if (firstname != null) {
         resend.emails.send({
             from: "info@gkp.noreplynoreply.online",
-            to: "alihadimedlej001@gmail.com",
+            to: "dealgo2025@gmail.com",
             subject: "New message from your website customer",
             text: "Name: " + firstname + " " + lastname + "\nEmail:" + email + "\nPhone:" + phone + "\n" + message,
         })
@@ -24,8 +24,8 @@ export const sendEmail = async (formData: FormData) => {
         resend.emails.send({
             from: "info@gkp.noreplynoreply.online",
             to: email+"",
-            subject: "Offer code from Pety Shop",
-            text: "Thanks you for subscribing with Pety Shop your code is: Abcd12345",
+            subject: "Offer code from DealGo",
+            text: "Thanks you for subscribing with DealGo your code is: Abcd12345",
         })
     }
     

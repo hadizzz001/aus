@@ -59,7 +59,7 @@ const YourComponent = () => {
                                     </h1>
                                     <button id="mybbtn" className='myBB' onClick={() => router.push("/search?cat="+category)}>Shop All</button>
                                 </div>
-                                <div className="w-[70px] h-[5px] bg-[#A59E98] mt-1 mb-5"></div>
+                                <div className="w-[70px] h-[5px] bg-[#143e56] mt-1 mb-5"></div>
 
                                 {/* Swiper Section */}
                                 {categories[category].length > 0 ? (

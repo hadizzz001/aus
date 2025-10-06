@@ -25,7 +25,7 @@ export default function Home() {
            
           <h2 className=" myGray"  >About Company</h2>
           <p className="  myGray" > 
-            Pety Shop specializes in premium pool equipment and exciting water toys designed to elevate your aquatic experience. From maintenance essentials to fun floatables, we bring innovation and enjoyment to every splash.
+            DealGo specializes in premium pool equipment and exciting water toys designed to elevate your aquatic experience. From maintenance essentials to fun floatables, we bring innovation and enjoyment to every splash.
           </p>
  
         </div>
@@ -84,7 +84,7 @@ export default function Home() {
   <style
   dangerouslySetInnerHTML={{
     __html:
-      "\n  .u-section-1 .u-image-1 {\n    border-color: #A59E98 !important;\n    width: 170px;\n    height: 170px;\n    margin: 0 auto;\n}\n"
+      "\n  .u-section-1 .u-image-1 {\n    border-color: #143e56 !important;\n    width: 170px;\n    height: 170px;\n    margin: 0 auto;\n}\n"
   }}
 />
 

@@ -23,7 +23,7 @@ const page = () => {
   const [promoCodes, setPromoCodes] = useState([]); // Store promo codes from API
   const [usedAbcd1234, setUsedAbcd1234] = useState(false);
   const [discountApplied, setDiscountApplied] = useState(false);
-  const [deliveryFee, setDeliveryFee] = useState(subtotal > 50 ? 0 : 5);
+  const [deliveryFee, setDeliveryFee] = useState(5);
   const [total, setTotal] = useState((subtotal + deliveryFee).toFixed(2));
   const [showLink, setShowLink] = useState(false);
   const [country, setCountry] = useState('');
@@ -185,21 +185,7 @@ useEffect(() => {
 
 
 
-useEffect(() => {
-  if (subtotal > 50) {
-    setDeliveryFee(0);
-    return;
-  }
-
-  const normalizedCity = inputs.city?.trim().toLowerCase();
-  if (normalizedCity === 'beirut') {
-    setDeliveryFee(3);
-  } else {
-    setDeliveryFee(5);
-  }
-}, [subtotal, inputs.city]);
-
-
+ 
 
 
 
@@ -230,7 +216,7 @@ useEffect(() => {
     }
 
     // Check for free delivery promo code or subtotal >= 100
-    if (promoCode.toLowerCase() === "freedelivery1" || subtotal > 50) {
+    if (promoCode.toLowerCase() === "freedelivery1"  ) {
       setDeliveryFee(0); // ✅ Delivery fee updates, triggering useEffect to update total
     }
 
@@ -432,7 +418,7 @@ useEffect(() => {
                       width="14"
                       height="14"
                       className="ml-2 mr-2 myBB"
-                      fill="#A59E98"
+                      fill="#143e56"
                     >
                       <path
                         className="st0 myBB"
@@ -445,7 +431,7 @@ useEffect(() => {
                       width="14"
                       height="14"
                       className="ml-2 mr-2 myBB rotate-180"
-                      fill="#A59E98"
+                      fill="#143e56"
                     >
                       <path
                         className="st0 myBB"
@@ -753,9 +739,7 @@ useEffect(() => {
                                       data-field-count={19}
                                     >
                                       <div className="wfacp_internal_form_wrap wfacp-comm-title ">
-                                        <h2 className="wfacp_section_heading wfacp_section_title ">
-                                          Shipping Information
-                                        </h2>
+ 
                                       </div>
                                       <div className="wfacp-comm-form-detail clearfix">
                                         <div className="wfacp-row">

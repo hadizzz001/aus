@@ -40,47 +40,47 @@ export default function RootLayout({
   />
   <meta content="max-image-preview:large" name="robots" />
   <title>
-    Pety Shop
+    DealGo
   </title>
   <meta
-    content="At Pety Shop, we're reshaping the way businesses connect."
+    content="At DealGo, we're reshaping the way businesses connect."
     name="description" 
   />
-  <meta content="Pety Shop" name="keywords" property="Pety Shopbynature, Pety Shop, men, women" />
+  <meta content="DealGo" name="keywords" property="DealGobynature, DealGo, men, women" />
   <meta
-    content="Pety Shop"
+    content="DealGo"
     name=""
     property="og:title"
   />
   <meta
-    content="https://Pety Shopbynature.com/"
+    content="https://DealGobynature.com/"
     name=""
     property="og:url"
   />
   <meta content="website" name="" property="og:type" />
   <meta
-    content="At Pety Shop, we're reshaping the way businesses connect."
+    content="At DealGo, we're reshaping the way businesses connect."
     name=""
     property="og:description"
   />
   <meta
-    content="https://res.cloudinary.com/dgram5txd/image/upload/v1751068593/icon_g3arzl.webp"
+    content="https://res.cloudinary.com/dwzizbcht/image/upload/v1759754485/5513e074-bd03-4dc5-b75e-aadec433e906-removebg-preview_ppvw9m.png"
     name=""
     property="og:image"
   />
    
   <link
-    href="https://res.cloudinary.com/dgram5txd/image/upload/v1751068593/icon_g3arzl.webp"
+    href="https://res.cloudinary.com/dwzizbcht/image/upload/v1759754485/5513e074-bd03-4dc5-b75e-aadec433e906-removebg-preview_ppvw9m.png"
     rel="apple-touch-icon"
     sizes="180x180"
   />
   <link
-    href="https://res.cloudinary.com/dgram5txd/image/upload/v1751068593/icon_g3arzl.webp"
+    href="https://res.cloudinary.com/dwzizbcht/image/upload/v1759754485/5513e074-bd03-4dc5-b75e-aadec433e906-removebg-preview_ppvw9m.png"
     rel="icon"
     sizes="32x32" 
   />
   <link
-    href="https://res.cloudinary.com/dgram5txd/image/upload/v1751068593/icon_g3arzl.webp"
+    href="https://res.cloudinary.com/dwzizbcht/image/upload/v1759754485/5513e074-bd03-4dc5-b75e-aadec433e906-removebg-preview_ppvw9m.png"
     rel="icon"
     sizes="16x16" 
   /> 

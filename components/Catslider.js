@@ -72,7 +72,7 @@ useEffect(() => {
             <h3 className="mt-3 text-lg font-semibold text-left myGray">{category.name}</h3>
             <button
               onClick={() => router.push("/search?cat=" + category.name)}
-              className="mt-2 bg-[#A59E98] font-bold text-white px-6 py-3    transition"
+              className="mt-2 bg-[#143e56] font-bold text-white px-6 py-3    transition"
             >
               Shop Now
             </button>

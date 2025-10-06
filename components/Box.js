@@ -134,7 +134,7 @@ export default function OfferPopup() {
                 type="submit"
                 style={{
                   marginTop: "25px",
-                  backgroundColor: "#A59E98",
+                  backgroundColor: "#143e56",
                   color: "white",
                   padding: "12px", 
                   border: "none",
@@ -183,7 +183,7 @@ export default function OfferPopup() {
                   borderRadius: "5px",
                   border: "none",
                   cursor: "pointer",
-                  backgroundColor: "#A59E98",
+                  backgroundColor: "#143e56",
                   color: "#fff",
                 }}
               >

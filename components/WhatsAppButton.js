@@ -95,8 +95,8 @@ const WhatsAppButton = ({ inputs, items, total, delivery, code }) => {
       return;
     }
 
-    const url = createWhatsAppURL(inputs, items, total, delivery, code, subtotal);
-    window.open(url, '_blank');
+    // const url = createWhatsAppURL(inputs, items, total, delivery, code, subtotal);
+    // window.open(url, '_blank');
     createOrder();
     clearCart();
     setError(null);
@@ -121,7 +121,7 @@ const WhatsAppButton = ({ inputs, items, total, delivery, code }) => {
 
 
   return (
-    <div className='container'>
+    <div className='container mb-20'>
       {error && <div className='myBB3'>{error}</div>}
       <span className="ProvidersSingleProduct--selected">
         <button onClick={handleClick} type="button" className="AddToCart HtmlProductAddToCart" style={{ borderRadius: "0" }}  >

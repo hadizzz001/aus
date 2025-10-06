@@ -126,7 +126,7 @@
 
 
  a:hover {
-   color: #A59E98 !important;
+   color: #143e56 !important;
    text-decoration: none;
  }
 
@@ -152,7 +152,7 @@
    font-family: 'Poppins', sans-serif;
    font-size: 12px;
    font-weight: 700;
-   background: #A59E98;
+   background: #143e56;
    text-align: center;
    padding: 0 5px;
    min-width: 100%;
@@ -277,7 +277,7 @@
 
 
  .HtmlProductAddToCart {
-   background-color: #A59E98 !important;
+   background-color: #143e56 !important;
  }
 
  button:focus {
@@ -387,7 +387,7 @@
  }
 
  #logotoedits {
-   margin-top: 3em;
+   margin-top: 1em;
  }
 
 
@@ -525,7 +525,7 @@
 
 
  #vid-action-push:hover {
-   background-color: #A59E98;
+   background-color: #143e56;
  }
 
  /* Image container with a weird id */
@@ -575,11 +575,11 @@
    left: 10%;
    /* Align button to the left */
    transform: translateX(0);
-   background-color: #A59E98;
+   background-color: #143e56;
    transition: background-color 0.3s ease;
-   border-color: #A59E98 !important;
+   border-color: #143e56 !important;
    padding: 8px 20px;
-   border: 2px solid #A59E98;
+   border: 2px solid #143e56;
    border-radius: 10px;
    font-size: 18px;
    font-weight: bold;
@@ -592,7 +592,7 @@
  }
 
  .pic-button-splash:hover {
-   background-color: #A59E98;
+   background-color: #143e56;
  }
 
  /* For mobile responsiveness */
@@ -654,7 +654,7 @@
  }
 
  .myBB {
-   color: #A59E98 !important;
+   color: #143e56 !important;
  }
 
  .myBB3 {
@@ -748,7 +748,7 @@
  }
 
  .myNewC {
-   color: #A59E98 !important;
+   color: #143e56 !important;
  }
 
  @media (min-width: 1200px) {
@@ -768,7 +768,7 @@
    position: absolute;
    bottom: -5px;
    right: -5px;
-   background-color: #A59E98;
+   background-color: #143e56;
    color: white;
    font-size: 8px;
    font-weight: bold;
@@ -900,7 +900,7 @@
 
 
  #page-footer-mailto-support-bellroy-com-1 {
-   color: #A59E98 !important;
+   color: #143e56 !important;
  }
 
 
@@ -931,7 +931,7 @@
  }
 
  .color-circle.selected {
-   border: 3px solid #A59E98 !important;
+   border: 3px solid #143e56 !important;
  }
 
  .color-circle.disabled {
@@ -1110,13 +1110,24 @@
 
 
 .myfgray{
-    color: #A59E98 !important;
+    color: #999 !important;
 }
 
 @media (max-width: 768px) {
     .SiteFooterSitemap .column {
-        border-top: 1px solid #666;
+        border-top: 1px solid #999;
         background: #231f20 !important;
         overflow: hidden;
     }
+}
+ 
+
+.elementor-20120 .elementor-element.elementor-element-f1c046e:not(.elementor-motion-effects-element-type-background) > .elementor-widget-wrap, .elementor-20120 .elementor-element.elementor-element-f1c046e > .elementor-widget-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+    background-color: transparent !important;
+}
+
+
+.elementor-20120 .elementor-element.elementor-element-b92d2c:not(.elementor-motion-effects-element-type-background), .elementor-20120 .elementor-element.elementor-element-b92d2c > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+ 
+    background-image: linear-gradient(90deg, #ffffff00 50%, #f6faff00 100%) !important;
 }
