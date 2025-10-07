@@ -1,30 +1,49 @@
-"use client";
-
+'use client';
 import React, { useState, useEffect } from "react";
 
 const MyCarousel = () => {
-  const images = [
-    "https://res.cloudinary.com/dwzizbcht/image/upload/v1759588218/1_wg9tif.webp",
-    "https://res.cloudinary.com/dwzizbcht/image/upload/v1759605403/Trottinette_vytxm2.webp",
-  ];
-
+  const [banners, setBanners] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Fetch banners from API
   useEffect(() => {
+    const fetchBanners = async () => {
+      try {
+        const res = await fetch("/api/banner");
+        const data = await res.json();
+        setBanners(data);
+      } catch (err) {
+        console.error("Failed to load banners:", err);
+      }
+    };
+    fetchBanners();
+  }, []);
+
+  // Slide change every 4 seconds
+  useEffect(() => {
+    if (banners.length === 0) return;
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 4000); // change every 4s
+      setCurrentIndex((prev) => (prev + 1) % banners.length);
+    }, 4000);
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [banners]);
+
+  if (banners.length === 0) {
+    return (
+      <div className="relative w-full h-screen flex items-center justify-center">
+        <p>Loading...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Carousel Background */}
       <div className="absolute top-0 left-0 w-full h-full">
-        {images.map((img, index) => (
+        {banners.map((item, index) => (
           <img
-            key={index}
-            src={img}
+            key={item._id}
+            src={`${item.img?.[0]}?q=20`}
             alt={`Slide ${index + 1}`}
             className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${
               index === currentIndex ? "opacity-100" : "opacity-0"
@@ -33,18 +52,15 @@ const MyCarousel = () => {
         ))}
       </div>
 
-      {/* Overlay Content */}
-      <div className="relative z-10 flex flex-col items-start justify-center h-full p-4 text-left text-black">
-        <h1 className="text-5xl font-bold uppercase animate-slideInLeft myWhite">
-          Modern Scooters
-        </h1>
-        <p className="text-[14px] mt-2 animate-slideInLeft delay-200 myWhite">
-          Offer with up to 50% off on our categories!
-        </p>
+      {/* Overlay Content (title + subtitle from HTML) */}
+      <div className="relative z-10 flex flex-col items-start justify-center h-full p-6 text-left text-black bg-black/30  ">
+        <div
+          className="text-white max-w-xl animate-slideInLeft"
+          dangerouslySetInnerHTML={{ __html: banners[currentIndex].name }}
+        />
         <a
           href="/shop"
-          style={{ padding: "1em" }}
-          className="mt-10 px-12 py-6 bg-white font-semibold transition-all duration-300 transform hover:scale-105 myGray"
+          className="mt-8 px-10 py-4 bg-white text-black font-semibold  transition-all duration-300 transform hover:scale-105"
         >
           Shop Now!
         </a>
@@ -62,13 +78,8 @@ const MyCarousel = () => {
             opacity: 1;
           }
         }
-
         .animate-slideInLeft {
           animation: slideInLeft 1s ease-out forwards;
-        }
-
-        .delay-200 {
-          animation-delay: 0.2s;
         }
       `}</style>
     </div>
