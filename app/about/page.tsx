@@ -25,7 +25,7 @@ export default function Home() {
            
           <h2 className=" myGray"  >About Company</h2>
           <p className="  myGray" > 
-            DealGo specializes in premium pool equipment and exciting water toys designed to elevate your aquatic experience. From maintenance essentials to fun floatables, we bring innovation and enjoyment to every splash.
+            DealGo is your trusted destination for high-quality electric scooters and home tools that combine innovation, performance, and reliability. We bring you eco-friendly mobility solutions designed for everyday convenience, along with durable tools to make your home projects easier and more efficient. At DealGo, we’re committed to powering your lifestyle — whether you’re on the move or improving your home.
           </p>
  
         </div>

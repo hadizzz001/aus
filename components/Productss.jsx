@@ -29,11 +29,14 @@ const Body = () => {
     try {
       const response = await fetch("/api/category");
       const data = await response.json();
-      setCheckboxesData(data);
+
+      // Only keep the first 3 categories
+      setCheckboxesData(data.slice(0, 3));
     } catch (error) {
       console.error("Error fetching categories:", error);
     }
   };
+
 
   useEffect(() => {
     fetchCategories();
@@ -53,13 +56,13 @@ const Body = () => {
     <>
       <div className="br_min-h-screen br_relative md:mt-20 mt-20">
         {/* Title */}
-<header className="br_text-white br_p-3 br_flex br_flex-col br_items-center br_justify-center ">
-  <div className="br_text-left md:br_max-w-[600px] lg:br_max-w-[800px] md:br_text-center br_flex br_flex-col br_gap-2 md:br_gap-4 md:br_items-center">
-    <p className="br_text-2xl md:br_text-3xl myGray">
-      Explore our curated collection!
-    </p>
-  </div>
-</header>
+        <header className="br_text-white br_p-3 br_flex br_flex-col br_items-center br_justify-center ">
+          <div className="br_text-left md:br_max-w-[600px] lg:br_max-w-[800px] md:br_text-center br_flex br_flex-col br_gap-2 md:br_gap-4 md:br_items-center">
+            <p className="br_text-2xl md:br_text-3xl myGray">
+              Explore our curated collection!
+            </p>
+          </div>
+        </header>
 
 
         {/* Categories as image-radio buttons */}
@@ -92,7 +95,8 @@ const Body = () => {
                   }}
                 >
                   <img
-                    src={category.img?.[0]}
+src={category.img?.[0]?.replace('/upload/', '/upload/q_20/')}
+
                     alt={category.name}
                     className="br_w-full br_h-full br_object-contain"
                     style={{ objectFit: "contain" }}
@@ -140,7 +144,8 @@ const Body = () => {
                     {/* Product Image */}
                     <div className="relative w-full aspect-square">
                       <img
-                        src={item.img[0]}
+                       src={item.img?.[0]?.replace('/upload/', '/upload/q_20/')}
+
                         alt={item.title || "Product Image"}
                         className="w-full h-full object-contain rounded"
                       />

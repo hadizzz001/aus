@@ -277,7 +277,8 @@ const Body = () => {
                       >
 <div className="relative inline-block w-full max-w-[300px] aspect-square  ">
   <img
-    src={item.img[0]}
+    src={item.img?.[0]?.replace('/upload/', '/upload/q_20/')}
+
     alt="Default"
     className="w-full h-full object-contain object-center rounded"
   />
